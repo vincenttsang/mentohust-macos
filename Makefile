@@ -7,4 +7,6 @@ dlfunc.o: dlfunc.c
 myfunc.o: myfunc.c  md5.h mycheck.h
 	llvm-gcc -c $< 
 ..c.o:
-	llvm-gcc -c $< 
+	llvm-gcc -c $<
+clean:
+	rm *.o

@@ -29,9 +29,10 @@ static void *libpcap = NULL;
 
 int load_libpcap(void) {
 	char *error;
-	//char *file[] = {"../Frameworks/mypcap.dylib"};
-    char *file[] = {"libpcap.dylib", "libpcap.A.dylib"};
-    //char *file[] = {"../mypcap.dylib"};
+	// char *file[] = {"../Frameworks/mypcap.dylib"};
+	// 将mypcap改为libpcap
+	// change mypcap to libpcap
+        char *file[] = {"libpcap.dylib"};
 	int i, count =1 ;
 	for (i=0; i<count && !libpcap; i++) {
 		libpcap = dlopen(file[i], RTLD_LAZY);
