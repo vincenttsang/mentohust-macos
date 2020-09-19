@@ -11,3 +11,9 @@
 git clone https://github.com/vincenttsang/mentohust-macos && cd mentohust-macos
 make
 成功后将会产生一个mentohust的mach-o执行档
+## 安装
+sudo make install
+## 卸载
+sudo make uninstall
+## 清理源码目录
+make clean
