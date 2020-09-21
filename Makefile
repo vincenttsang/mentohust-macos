@@ -17,7 +17,7 @@ install:
 	@echo "export PATH=/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/sbin" >> /etc/zshrc
 	@echo "正在复制mentohust至/usr/local/sbin"
 	@cp mentohust /usr/local/sbin
-	@echo "正在设置用户和权限" && chown root:wheel /usr/local/sbin/mentohust && chmod 4755 /usr/local/sbin/mentohust
+	@echo "正在设置用户和权限" && chown root:wheel /usr/local/sbin/mentohust && chmod 4755 /usr/local/sbin/mentohust && chmod a+w /var/run
 	@echo "安装完成，如需立即启用环境变量请在终端输入: source /etc/zshrc"
 uninstall:
 	@echo "提示：移除mentohust需要root权限"
