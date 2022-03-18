@@ -1164,7 +1164,7 @@ unsigned char *computeV4(const unsigned char *src, int len)
 unsigned char *computePwd(const unsigned char *md5)
 {
     static char buf[20];
-    /* Buggy in macOS tmp is too small
+    /* Buggy in SCAU, tmp is too small
     unsigned char tmp[40];
      */
     unsigned char tmp[256];
