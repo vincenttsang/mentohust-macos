@@ -498,9 +498,11 @@ static int sendChallengePacket()
 		sendPacket[0x17] = 16;
 		memcpy(sendPacket+0x18, checkPass(capBuf[0x13], capBuf+0x18, capBuf[0x17]), 16);
 		memcpy(sendPacket+0x28, userName, nameLen);
-
+        
 		memcpy(sendPacket+0x28+nameLen, pkt_md5, sizeof(pkt3));
-		memcpy(sendPacket + 0x90 + nameLen, computePwd(capBuf+0x18), 0x10);
+		//memcpy(sendPacket + 0x90 + nameLen, computePwd(capBuf+0x18), 0x10); //Buggy
+
+        memcpy(sendPacket + 0x90 + nameLen, computePwd(capBuf+0x18), 0x10);
 		//memcpy(sendPacket + 0xa0 +nameLen, fillBuf + 0x68, fillSize-0x68);
 		memcpy(sendPacket + 0x108 + nameLen, computeV4(capBuf+0x18, capBuf[0x17]), 0x80);
 		//sendPacket[0x77] = 0xc7;

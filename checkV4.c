@@ -1161,24 +1161,29 @@ unsigned char *computeV4(const unsigned char *src, int len)
 
 }
 
-char *computePwd(const unsigned char *md5)
+unsigned char *computePwd(const unsigned char *md5)
 {
     static char buf[20];
-
+    /* Buggy in macOS tmp is too small
     unsigned char tmp[40];
+     */
+    unsigned char tmp[256];
     int tmpl=0;
     tmpl = strlen(userName);
+    
     strcpy((char*)tmp, userName);
+    
     memcpy(tmp + tmpl, md5, 16);
+    
     tmpl += 16;
 
     memcpy(buf, ComputeHash(tmp, tmpl), 16);
-
     memset(tmp, 0, 16);
     strcpy((char*)tmp, password);
 
     int i;
     for (i=0; i<16; ++i)
         buf[i] ^= tmp[i];
+     
     return buf;
 }

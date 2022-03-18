@@ -24,6 +24,6 @@
 #define ID_WAITECHO			6	/* 等待心跳包 */
 
 int switchState(int type);	/* 改变状态 */
-int restart();	/* 重启认证 */
+int restart(void);	/* 重启认证 */
 
 #endif

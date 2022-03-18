@@ -2,5 +2,5 @@
 #define CHECKV4_H
 
 unsigned char *computeV4(const unsigned char *src, int len);
-char *computePwd(const unsigned char *md5);
+unsigned char *computePwd(const unsigned char *md5);
 #endif
