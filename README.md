@@ -1,7 +1,8 @@
 # mentohust-macos
 ## 简介
 ## 2022年03月18日 -- 加入锐捷v4算法（v4算法来自hyrathb）
-## v4算法已支持Apple Silicon
+##  1. v4算法已支持Apple Silicon
+##  2. 新增了Service值，在华南农业大学，办公账号需要使用mentohust -S 1登录，其他账号不需要使用Service值，否则会出现“用户使用了不允许的接入方式”的提示
 支持macOS Monterey的mentohust校园网认证客户端
 修改了byte_order的内容，以支持Apple Silicon
 修改了dylib的加载，以支持macOS

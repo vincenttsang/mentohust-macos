@@ -42,7 +42,7 @@ static const char *PACKAGE_BUGREPORT = "https://github.com/vincenttsang/mentohus
 #define D_DHCPMODE			0	/* 默认DHCP模式 */
 #define D_DAEMONMODE		0	/* 默认daemon模式 */
 #define D_MAXFAIL			8	/* 默认允许失败次数 */
-#define D_SERVICENAME		"internet"	/* 默认要登录的服务名 */
+#define D_SERVICENAME		" "	/* 默认要登录的服务名 */
 
 #define ECHOFLAGS (ECHO|ECHOE|ECHOK|ECHONL)    /* 控制台输入密码时的模式*/
 
@@ -68,7 +68,7 @@ char password[ACCOUNT_SIZE] = "";	/* 密码 */
 char nic[NIC_SIZE] = "";	/* 网卡名 */
 char dataFile[MAX_PATH] = "";	/* 数据文件 */
 char dhcpScript[MAX_PATH] = "";	/* DHCP脚本 */
-char serviceName[SERVICE_SIZE] = ""; /* 需要登陆到的服务名 */
+char serviceName[SERVICE_SIZE] = ""; /* 需要登录到的服务名 */
 u_int32_t ip = 0;	/* 本机IP */
 u_int32_t mask = 0;	/* 子网掩码 */
 u_int32_t gateway = 0;	/* 网关 */
@@ -661,7 +661,7 @@ static void showHelp(const char *fileName)
 		"\t-q 显示SuConfig.dat的内容(如-q/path/SuConfig.dat)\n"
 #ifndef NO_GETOPT_LONG
 		/* 从这里开始就是必须使用长选项的参数了 */
-		"\t--service 要登陆到的服务名 [默认internet]\n"
+		"\t--service 要登录到的服务名 [默认为空值]\n"
 #endif
 		"例如:\t%s -u username -p password -n eth0 -i 192.168.0.1 -m 255.255.255.0 -g 0.0.0.0 -s 0.0.0.0 -o 0.0.0.0 -t 8 -e 30 -r 15 -a 0 -d 1 -b 0 -v 4.10 -f default.mpf -c dhclient\n"
 		"注意：使用时请确保是以root权限运行！\n\n");
