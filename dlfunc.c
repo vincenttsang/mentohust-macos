@@ -33,7 +33,7 @@ int load_libpcap(void) {
 	// 将mypcap改为libpcap
 	// change mypcap to libpcap
         char *file[] = {"libpcap.dylib"};
-	int i, count =1 ;
+	int i, count =1  ;
 	for (i=0; i<count && !libpcap; i++) {
 		libpcap = dlopen(file[i], RTLD_LAZY);
 		error = dlerror();

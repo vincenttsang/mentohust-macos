@@ -5,6 +5,13 @@
 * 摘	要：改变认证状态
 * 作	者：HustMoon@BYHH
 */
+
+/*
+ * modified by shilianggoo@gmail.com
+ * add NEED_LOGOUT, fix permission problems
+ * in some secure setuid shebang implemention
+ */
+
 #ifndef HUSTMOON_MYSTATE_H
 #define HUSTMOON_MYSTATE_H
 
